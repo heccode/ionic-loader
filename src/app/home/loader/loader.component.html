@@ -1,0 +1,14 @@
+<div class="loader full-screen" *ngIf="loading">
+  <div class="loader-inner">
+    <ion-spinner color="primary" size="large"></ion-spinner>
+    <p class="loader__title">Cargando...</p>
+    <div class="loader__content">
+      <div class="loader__images">
+        <figure class="loader__figure" [ngClass]="[randomIndex === i ? 'active': '']" *ngFor="let image of images; index as i">
+          <img class="loader__image" [src]="image.imageUrl">
+          <figcaption class="loader__caption">{{image.name}}</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>
